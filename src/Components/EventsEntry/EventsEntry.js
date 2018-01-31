@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import './styles.css';
 
 class EventsEntry extends React.Component {

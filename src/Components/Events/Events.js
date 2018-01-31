@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import EventsEntry from '../EventsEntry/EventsEntry';
 import './styles.css';
 

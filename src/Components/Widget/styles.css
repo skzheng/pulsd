@@ -2,15 +2,15 @@
   margin: auto;
   height: 50vh;
   width: 50vw;
-  background-color: rgb(236, 240, 242);
-  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.612);
 }
 
 #widget-header {
   background-color: rgb(255, 43, 43);
   height: 5vh;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   box-shadow: 1px -1px 4px rgba(0, 0, 0, 0.612);
 }
