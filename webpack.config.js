@@ -12,9 +12,12 @@ module.exports = {
  output: {
   path: path.join(__dirname, 'www'),
   filename: 'bundle.js',
-    library: 'Widget',
-   libraryTarget: 'umd',
-   umdNamedDefine: true,
+
+  // Compile as Widget
+
+  //  library: 'Widget',
+  //  libraryTarget: 'umd',
+  //  umdNamedDefine: true,
  },
 
  module: {
