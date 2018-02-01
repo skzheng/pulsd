@@ -6,7 +6,7 @@
   border-radius: 5px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.612);
   text-align: center;
-  position:relative;
+  position: relative;
 }
 
 #widget-header {
@@ -62,6 +62,23 @@
 #admin:hover {
   cursor: pointer;
   transform: scale(1.2);
+}
+
+#input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  margin: 5vh auto;
+}
+
+#input-form > * {
+  margin: 2vh;
+}
+
+.input-group-text {
+  width: 8vw;
 }
 
 #footer {

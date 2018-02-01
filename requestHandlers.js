@@ -10,30 +10,31 @@ module.exports = {
             if(err){
               res.send('Error retrieving events');
             } else {
-              console.log('good!')
               res.status(200).send(results);
             }
           })
   },
 
   postEvents: function(req, res){
-    console.log('rEQUEST', req.data)
     let title = req.body.title;
     let category = req.body.category;
     let location = req.body.location;
-    let imageURLs = req.body.imageURLs;
+    let imageURL = req.body.imageURL;
 
     Events.create({
       eventTitle: title,
       eventCategory: category,
       eventLocation: location,
-      eventImageURLs: imageURLs
+      eventImageURL: imageURL
     }, function(err, event){
-      if(err){
-        console.log('Error creating event');
-      } else {
-        console.log('Event created', event);
-      }
+        if(err){
+          res.send(err);
+          console.log('Error creating event');
+        } else {
+          // res.contentType('text/html');
+          res.send(event);
+          // console.log('Event created', event);
+        }
     })
   }
 }

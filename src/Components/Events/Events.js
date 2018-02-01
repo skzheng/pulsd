@@ -13,7 +13,11 @@ class Events extends React.Component {
   render(){
     return (
       <div>
-        yo
+        { 
+          this.props.eventData.map((event, i) => {
+            return <EventsEntry event={event} key={i}/>
+          })
+        }
       </div>
     )
   }
