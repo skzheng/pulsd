@@ -1,0 +1,62 @@
+.event-entry {
+  width: 15vw;
+  height: 20vh;
+  margin: auto;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+}
+
+.event-header {
+  letter-spacing: 0.2rem;
+  padding-left: 5px;
+  color: white;
+  font-weight: lighter;
+  background-color: black;
+}
+
+.event-title {
+  float:left;
+  width: 13vw;
+  overflow-y: hidden;
+  margin-top: 5px;
+  height: 6vh;
+  font-size: 0.9rem;
+  color: #56CCA9;
+}
+
+.event-title:hover {
+  color: #56CCA9;
+}
+
+.event-image {
+  height: 25vh;
+  width: 15vw;
+}
+
+.event-location {
+  color: black;
+  float:left;
+  margin-top: 5px;
+  width: 10vw;
+  font-size: 0.9rem;
+}
+
+.event-location:hover {
+  color: black;
+}
+
+.event-bookmark {
+  float:right;
+  margin: 15px 3px;
+  height: 16px;
+  width: 8px;
+  background: url('/assets/event-bookmark.png') no-repeat 0 0;
+}
+
+.venue-follow {
+  float: right;
+  margin: auto;
+  height: 15px;
+  width: 15px;
+  background: url('/assets/venue-follow.png') no-repeat 0 0;
+}

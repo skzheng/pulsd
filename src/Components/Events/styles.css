@@ -1,0 +1,13 @@
+#events {
+
+}
+
+.slick-slider {
+  margin: auto;
+  height: 40vh;
+  width: 40vw;
+}
+
+.slick-next:before, .slick-prev:before {
+  color: black !important;
+}

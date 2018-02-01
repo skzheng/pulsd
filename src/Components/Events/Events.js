@@ -1,5 +1,6 @@
 import React from 'react';
 import EventsEntry from '../EventsEntry/EventsEntry';
+import Slider from 'react-slick';
 import './styles.css';
 
 class Events extends React.Component {
@@ -10,14 +11,31 @@ class Events extends React.Component {
     }
   }
 
+  componentDidUpdate(){
+    console.log("events props",this.props.eventsData)
+  }
+
   render(){
+    let settings = {
+      dots: true,
+      autoplay: true,
+      speed: 1000,
+      autoplaySpeed: 4000,
+      slidesToShow: 2,
+      // slidesToScroll: 3,
+      // adaptiveHeight: true,
+    }
     return (
-      <div>
+      <div id="events">
+        <Slider {...settings}>
         { 
-          this.props.eventData.map((event, i) => {
-            return <EventsEntry event={event} key={i}/>
+          this.props.eventsData
+          ? this.props.eventsData.map((event, i) => {
+              return <div key={i}><EventsEntry event={event}/></div>
           })
+          : null
         }
+        </Slider>
       </div>
     )
   }

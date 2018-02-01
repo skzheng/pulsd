@@ -5,10 +5,18 @@ module.exports = {
  entry: [
    './index.js',
  ],
+//  output: {
+//    path: path.join(__dirname, 'www'),
+//    filename: 'bundle.js',
+//  },
  output: {
-   path: path.join(__dirname, 'www'),
-   filename: 'bundle.js',
+  path: path.join(__dirname, 'www'),
+  filename: 'bundle.js',
+    library: 'Widget',
+   libraryTarget: 'umd',
+   umdNamedDefine: true,
  },
+
  module: {
    rules: [
      {

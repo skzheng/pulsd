@@ -54,8 +54,8 @@ class Widget extends React.Component {
   handleGetEvents(){
     axios.get('/events')
     .then((response) => {
-      console.log(response);
-      this.setState({ eventData: response.data})
+      console.log('REQUEST', response);
+      this.setState({ eventsData: response.data})
     })  
     .catch((error) => {
       console.log('Error getting events', error);
