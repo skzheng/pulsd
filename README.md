@@ -1,3 +1,3 @@
 ## Example
 
-![Screenshot](/assets/example.gif)
+![Screenshot](public/assets/example.gif)
