@@ -5,38 +5,52 @@ import './styles.css';
 
 
 class Widget extends React.Component {
- constructor() {
-   super();
-   this.state = {
-     dummy: [
-       {}
-     ],
-     eventTitle: '',
-     eventCategory: '',
-     eventLocation: '',
-     eventImageURL: ''
-   }
-   this.handleGetEvents = this.handleGetEvents.bind(this);
-   this.handleAddEvent = this.handleAddEvent.bind(this);
- }
+  constructor() {
+    super();
+    this.state = {
+      dummy: [
+        {}
+      ],
+      eventsData: [],
+      eventTitle: '',
+      eventCategory: '',
+      eventLocation: '',
+      eventImageURLs: ''
+    }
+    this.handleGetEvents = this.handleGetEvents.bind(this);
+    this.handleAddEvent = this.handleAddEvent.bind(this);
+  }
 
- componentDidMount(){
-   this.handleGetEvents();
- }
+  componentDidMount(){
+    // this.handleAddEvent();
+    this.handleGetEvents();
+  }
 
- handleAddEvent(){
-   axios.get('/events')
-   .then((response) => {
-     console.log(response.data);
-   })  
-   .catch((error) => {
-     console.log(error);
-   })
- }
+  handleAddEvent(){
+    axios.post('/events', {
+      title: this.state.eventTitle,
+      location: this.state.eventLocation,
+      category: this.state.eventCategory,
+      imageURLs: this.state.eventImageURLs
+    })
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  }
 
- handleGetEvents(){
-
- }
+  handleGetEvents(){
+    axios.get('/events')
+    .then((response) => {
+      console.log(response);
+      this.setState({ eventData: response.data})
+    })  
+    .catch((error) => {
+      console.log('errroorr', error);
+    })   
+  }
 
  render() {
    return (
@@ -46,6 +60,7 @@ class Widget extends React.Component {
          <img id="admin" src="/assets/admin.png" />
         </div>
         <p id="widget-title" className="small">EXPLORE EVENTS NEARBY</p>
+        <Events eventsData={this.state.eventsData}/>
         <p id="footer" className="text-muted small">Powered by Pulsd</p>
      </div>
 

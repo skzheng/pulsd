@@ -11,7 +11,11 @@ class Events extends React.Component {
   }
 
   render(){
-    <div></div>
+    return (
+      <div>
+        yo
+      </div>
+    )
   }
 }
 

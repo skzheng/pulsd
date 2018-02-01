@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoURI = 'mongodb://simon:simon@ds119688.mlab.com:19688/pulsd'; 
-mongoose.connect(mongoURI, {useMongoClient: true});
+mongoose.connect(mongoURI);
 
 var db = mongoose.connection;
 db.on('error', function(err) {

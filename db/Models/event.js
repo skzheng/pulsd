@@ -13,8 +13,8 @@ let EventSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  eventImageURL: {
-    type: String,
+  eventImageURLs: {
+    type: Array,
     required: true
   }
 });
