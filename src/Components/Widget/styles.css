@@ -1,16 +1,74 @@
 #widget {
-  margin: auto;
+  margin: 10vh auto;
   height: 50vh;
   width: 50vw;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.612);
+  text-align: center;
+  position:relative;
 }
 
 #widget-header {
-  background-color: rgb(255, 43, 43);
+  background-color: rgb(238, 238, 238);
   height: 5vh;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  box-shadow: 1px -1px 4px rgba(0, 0, 0, 0.612);
+  box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.612);
+}
+
+#widget-title {
+  padding: 1vh;
+  border-bottom: 1px solid black;
+  margin: 1vh 5vw;
+}
+
+#logo {
+  height: 3vh;
+  width: 3vh;
+  margin: 1vh;
+  float: left;
+  border-radius: 5px;
+}
+
+#logo:hover {
+  cursor:pointer;
+  /* transform: scale(1.2); */
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.386);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(1.0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  
+}
+
+#admin {
+  height: 3vh;
+  width: 3vh;
+  margin: 1vh;
+  float: right;
+}
+
+#admin:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+#footer {
+  bottom: -4vh;
+  position: absolute;
+  left: 50%;
+  margin: auto;
+  width: 200px;
+  margin-left: -100px;
 }
