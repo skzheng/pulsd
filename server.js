@@ -9,7 +9,7 @@ const app = express();
  
 const compiler = webpack(webpackConfig);
  
-app.use(express.static(__dirname + '/www'));
+app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.json());
 
